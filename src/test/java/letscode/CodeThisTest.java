@@ -18,7 +18,7 @@ public class CodeThisTest {
 
 
     @Test
-    public void maxiStockTest() {
+    public void maxiStockBuyTest() {
         MaxiVendingMachine maxiVendingMachine = new MaxiVendingMachine();
         Product product = new Product();
         LaysChips laysChips = new LaysChips();
@@ -28,12 +28,28 @@ public class CodeThisTest {
 
         try{
             maxiVendingMachine.buy(laysChips);
-            maxiVendingMachine.buy(product);
+        //    maxiVendingMachine.buy(product);
 
         } catch (ProductNotFoundException e) {
             e.printStackTrace();
         }
         assertEquals(2, maxiVendingMachine.getStock(laysChips));
+    }
+
+    @Test
+    public void maxiStockAddTest() {
+        MaxiVendingMachine maxiVendingMachine = new MaxiVendingMachine();
+
+        Coke coke = new Coke();
+        LaysChips laysChips = new LaysChips();
+        maxiVendingMachine.addStock(coke,5);
+
+
+        maxiVendingMachine.addStock(laysChips,7);
+
+
+
+        assertEquals(5, maxiVendingMachine.getStock(coke));
     }
 
 

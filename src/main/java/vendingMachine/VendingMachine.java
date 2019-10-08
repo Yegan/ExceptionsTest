@@ -44,11 +44,7 @@ public class VendingMachine {
    }
     // throwing an exception if the product purchases is below 0
 
-
-
-
     }
-
     public void addStock(Product product, int newStock){
             if (product instanceof Coke) {
                 cokeStock += newStock;
@@ -78,34 +74,6 @@ public class VendingMachine {
         return 0;
     }
 
-//    public static void main(String[] args) {
-//
-//        LaysChips laysChips = new LaysChips();
-//        Coke coke1 = new Coke();
-//        SmartieChocolate smartieChocolate = new SmartieChocolate();
-//
-//        vendingMachine.VendingMachine vendingMachine = new vendingMachine.VendingMachine();
-//        vendingMachine.addStock(coke1, 2);
-//        vendingMachine.addStock(laysChips,3);
-//        vendingMachine.addStock(smartieChocolate,3);
-//        vendingMachine.getStock(laysChips);
-//        vendingMachine.getStock(coke1);
-//        vendingMachine.getStock(smartieChocolate);
-//
-//
-//        try{
-//            vendingMachine.buy(laysChips);
-//            vendingMachine.buy(laysChips);
-//            vendingMachine.buy(laysChips);
-//            vendingMachine.buy(laysChips);
-//        }catch (ProductNotFoundException e){
-//            e.printStackTrace();
-//        }
-//        System.out.println("Current stock value:");
-//        vendingMachine.getStock(laysChips);
-//
-//
-//    }
 
 }
 

@@ -43,43 +43,17 @@ public class MaxiVendingMachine extends VendingMachine {
 
     }
 
-
-
-
-//    public static void main(String[] args) {
-//    VendingMachine vendingMachine = new VendingMachine();
-//    MaxiVendingMachine maxiVendingMachine = new MaxiVendingMachine();
-//
-//    Coke coke = new Coke();
-//    vendingMachine.addStock(coke,2);
-//    vendingMachine.getStock(coke);
-//
-//    SmartieChocolate smartieChocolate = new SmartieChocolate();
-//    vendingMachine.addStock(smartieChocolate, 1);
-//    vendingMachine.getStock(smartieChocolate);
-//
-//
-//    LaysChips laysChips = new LaysChips();
-//    vendingMachine.addStock(laysChips,1);
-//    vendingMachine.getStock(laysChips);
-//
-//        System.out.println("--------------------------------------------");
-//    try{
-//        maxiVendingMachine.buy(coke);
-//        maxiVendingMachine.buy(laysChips);
-//        maxiVendingMachine.buy(laysChips);
-//        maxiVendingMachine.buy(smartieChocolate);
-//    }catch (InvalidProductException in){
-//        in.printStackTrace();
-//    }catch (ChocolatesAllGone c){
-//        c.printStackTrace();
-//    }catch(SaltySnacksOutOfStockException s){
-//        s.printStackTrace();
-//    }catch (SoftDrinksOutOfStockException so){
-//        so.printStackTrace();
-//    }
-//
-//
-//    }
+    @Override
+    public void addStock(Product product, int stock){
+        if (product instanceof Coke) {
+            cokeStock += stock;
+        }
+        if (product instanceof SmartieChocolate) {
+            chocolateStock += stock;
+        }
+        if (product instanceof LaysChips) {
+            chipsStock += stock;
+        }
+    }
 
 }
